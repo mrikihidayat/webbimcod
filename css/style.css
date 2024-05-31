@@ -1,0 +1,521 @@
+:root{
+  --primary-color: #0008C1;
+  --second-color: #2146C7;
+  --third-color: #E6CBA8;
+  --button-color: #FDF0E0;
+}
+
+/*dasar pengaturan*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 992px;
+  margin: 0 auto;
+}
+hr {
+  width: 80%;
+  margin: 20px auto;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: var(--primary-color);
+  border-bottom: 1px solid rgba(33, 70, 199, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .logonavbar {
+  font-size: 2rem;
+  font-weight: 700;
+  color:#fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar .logonavbar span {
+  color: red;
+}
+
+.navbar .navbar-nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+.navbar .navbar-extra a{
+  color: #fff;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: red;
+}
+
+.navbar .navbar-extra a:hover {
+  color: red;
+}
+
+#humberger{
+  display: none;
+}
+
+/* search form */
+.navbar .search-form {
+  position: absolute;
+  top: 100%;
+  right: 7%;
+  background-color: #f1f1f1;
+  width: 50rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.3s;
+}
+
+.navbar .search-form.active {
+  transform: scaleY(1);
+}
+
+.navbar .search-form input {
+  height: 100%;
+  width: 100%;
+  font-size: 1.6rem;
+  color: var(--bg);
+  padding: 1rem;
+}
+
+.navbar .search-form label {
+  cursor: pointer;
+  font-size: 2rem;
+  margin-right: 1.5rem;
+  color: var(--bg);
+}
+
+
+/* tampilan awal - home*/
+.tampilan-awal {
+  width: 100%;
+}
+.tampilan-awal {
+  
+  background-image: url('../img/awal.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 680px;
+  position: relative;
+  margin-bottom: 10px;
+  margin-top: 0.5px;
+}
+.tampilan-awal::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(0deg,  rgba(33, 70, 199, 1) 8%,
+  rgba(255, 255, 255, 0) 50%);
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 0.1rem;
+}
+.tampilan-awal h1 {
+  color: #fff;
+  font-size: 5em;
+  text-align: center;
+  padding: 200px 0 300px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  position: relative;
+  margin-bottom: 0.1rem;
+  padding-bottom: 0.1rem;
+}
+
+.tampilan-awal h1 span{
+  color: red;
+}
+
+.tampilan-awal p{
+  padding-top: 0.1rem;
+  text-align: center;
+  font-size: 2em;
+  font-weight: 300;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  font-style: italic;
+  font-style: bold;
+  margin-bottom: 0.1rem;
+  padding-bottom: 0.1rem;
+}
+
+
+/*About*/
+/* Main */
+main {
+  margin-top: 10px;
+}
+
+main .container {
+  display: flex;
+  flex-direction: row;
+}
+
+#content {
+  padding-top: 0.5rem;
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  flex: 7;
+}
+
+#content h1 {
+  text-align: center;
+  color: var(--second-color);
+}
+
+#content p {
+  text-align: justify;
+}
+#content a {
+  display: flex;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  margin: 5px 40%;
+}
+
+.visimisi .bold{
+  font-weight: bold;
+}
+
+
+/*pilihan course*/
+.kelas{
+  margin-top: 0.6rem;
+  padding-top: 0.6rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr) );
+  gap: 28px;
+}
+
+.box{
+  text-align: center;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 0.7rem;
+  box-shadow: #f1f1f1;
+}
+
+.box img{
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  object-position: center;
+  padding: 20px;
+  background: #f1f1f1;
+  border-radius: 0.8rem;
+}
+
+.box h3{
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  padding-top: 0.8rem;
+  line-height: 0.8em;
+}
+
+.kelas .box p{
+  font-size: 1rem;
+  font-weight: 500;
+  color: black;
+  text-align: center;
+  justify-content: center;
+  position: center;
+  align-items: center;
+  padding-top: 0.8rem;
+  line-height: 0.8em;
+}
+
+.feature-image {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  object-position: center;
+  padding-top: 1rem;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+
+
+/*review*/
+.review-class{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr) );
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-content: center;
+  align-items: center;
+  position: center;
+}
+
+.review-class .box-review{
+  padding: 20px;
+  box-shadow: black;
+  border-radius: 0.8rem;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+.review-class .box-review h2{
+  font-size: 1.2rem;
+  color: var(--second-color);
+  font-style: italic;
+  text-align: center;
+}
+
+.review-class .box-review p{
+  font-size: 1rem;
+}
+
+.review-class .box-review:hover{
+  background: rgb(248, 64, 64);
+  transition: 0.2s all linear;
+}
+
+.stars .bx{
+  color:rgb(240, 240, 75);
+}
+
+.review-class .box-review img{
+  width: 92px;
+  height: 92px;
+  object-fit: cover;
+  border-radius: 51%;
+  object-position: center;
+  padding-top: 1rem;
+}
+
+
+/* Contact*/
+.kontak {
+  width: 90%;
+  justify-content: center;
+  object-position: center;
+  align-items: center;
+  padding-top: 0.1rem;
+  margin-top: 0.1em;
+}
+
+.form-group label {
+  padding-top: 0.1rem;
+  margin-top: 0.1em;
+  display: block;
+  margin: 2rem 0 0.5rem 0;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+  padding-top: 0.1rem;
+  margin-top: 0.1em;
+  width: 100%;
+  padding: 1rem 0.8rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  outline: 0;
+  transition: border 0.15s;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+  height: 4.3rem;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.contact .form-group .btn {
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.1rem;
+  color:white;
+  background-color: var(--primary-color);
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  justify-content: center;
+  position: center;
+}  
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+  border: 1px solid var(--primary-color);
+}
+
+
+/* Aside */
+aside {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-left: 1rem;
+  margin-top: 2rem;
+}
+.profile header {
+  text-align: center;
+}
+.profile img {
+  width: 200px;
+}
+
+aside table {
+  text-align: left;
+}
+aside table td {
+  padding-left: 10px;
+}
+
+
+/* Footer */
+footer {
+  background-color: var(--second-color);
+  text-align: center;
+  padding: 0.8rem 0 2rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+footer .socials {
+  padding-top: 0.1rem;
+}
+
+footer .socials a {
+  color: #fff;
+  margin: 1rem;
+  width: 0.8rem;
+}
+
+footer .socials a:hover {
+  color:red;
+}
+
+footer .links a {
+  color: #fff;
+  padding: 0.7rem 1rem;
+}
+
+footer .credit {
+  font-size: 1rem;
+  color: white;
+}
+
+footer .credit a {
+   font-weight: 700;
+}
+
+
+ /* Media*/
+  /* Laptop */
+  @media (max-width: 1366px) {
+    html {
+      font-size: 75%;
+    }
+  }
+  
+  /* Tablet */
+  @media (max-width: 768px) {
+    html {
+      font-size: 62.5%;
+    }
+
+  #humberger{
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: var(--second-color);
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: white;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+    text-decoration: none;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .navbar .search-form {
+    width: 90%;
+    right: 2rem;
+  }
+
+  .visimisi .visimisii{
+    margin-left: 1rem;
+    text-align: justify;
+  }
+
+
+  main .container {
+    flex-direction: column;
+  }
+}
+
+ /* HP */
+ @media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
